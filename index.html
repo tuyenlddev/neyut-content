@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/asset/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="/asset/css/reset.css">
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <link rel="stylesheet" href="/asset/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyCYCVcdRBNwFa4IaMM4mKagt7c5Q1oTIMo",
+              authDomain: "mycv-51a6c.firebaseapp.com",
+              projectId: "mycv-51a6c",
+              storageBucket: "mycv-51a6c.appspot.com",
+              messagingSenderId: "310316172480",
+              appId: "1:310316172480:web:ecc88a73b3c1b290701925",
+              measurementId: "G-7BPYRM1QSQ"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+    <title>Hi! My name is Dinh Tuyen</title>
+
+</head>
+
+<body>
+
+    <nav class="navbar color-white">
+        <div id="myDIV" class="">
+            <img src="/asset/icon/Logo.svg" alt="" class="logo mg-100"></img>
+            <ul class="nav--top navigation fs-20s">
+                <li><a class="btn__children active " href="#home">HOME</a></li>
+                <li><a class="btn__children " href="#experience">EXPERIENCE</a></li>
+                <li><a class="btn__children " href="#skill">SKILL</a></li>
+                <li><a class="btn__children " href="#project">PROJECT</a></li>
+                <li><a class="btn__children " href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+        <script>
+            // Lắng nghe sự kiện cuộn chuột
+            window.addEventListener('scroll', function () {
+                // Lấy danh sách các thẻ <a> trong menu
+                const menuItems = document.querySelectorAll('.nav--top .btn__children');
+
+                // Lặp qua từng thẻ <a> trong menu
+                menuItems.forEach(function (item) {
+                    // Lấy giá trị href của thẻ <a> và loại bỏ dấu "#"
+                    const target = item.getAttribute('href').slice(1);
+                    // Lấy phần tử có id tương ứng với giá trị href
+                    const section = document.getElementById(target);
+
+                    // Kiểm tra nếu section hiện tại trong tầm nhìn
+                    if (section.getBoundingClientRect().top <= window.innerHeight / 2) {
+                        // Xóa tất cả các class "active" trong menu
+                        menuItems.forEach(function (menuItem) {
+                            menuItem.classList.remove('active');
+                        });
+
+                        // Thêm class "active" cho thẻ <a> tương ứng
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+        </script>
+        <div class="nav--bottom">
+            <a href="https://www.instagram.com/neyut.ld_99/"><img src="/asset/icon/Instagram.svg" alt=""
+                    class="mg-20"></a>
+            <a href="https://www.facebook.com/tuyen.liam"><img src="/asset/icon/Facebook.svg" alt="" class="mg-20"></a>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <nav class="navbar__mobile">
+        <img src="/asset/icon/icon-logo-mobile-menu.svg" alt="" class="logo"></img>
+        <ul class="navbar__mobile--right">
+            <li><a href="https://www.facebook.com/tuyen.liam/"><img src="/asset/icon/icon-facebook-mobile.svg" alt="" class=""></a></li>
+            <li><a href="https://www.instagram.com/neyut.ld_99/"><img src="/asset/icon/icon-insta-mobile.svg" alt="" class=""></a></li>
+        </ul>
+    </nav>
+
+    <div class="main__content">
+        <section class="page-section hero" id="home">
+            <div class="home__content">
+                <div class="home__content--left">
+                    <img class="icon__background" src="/asset/img/icon-under-name-home.svg" alt="">
+                    <h1 class="name fs-102s">
+                        <div class="fw-400">MY NAME IS</div>
+                        <div class="fw-600">DINH TUYEN</div>
+                    </h1>
+                    <div class="description fs-32s fw-700 font-italic mg-48">
+                        Content Writer <span class="font-normal fw-500">base in</span> Vietnam
+                    </div>
+                    <button class="button__contact fs-18s mg-64">
+                        <a target="_blank" href="https://www.facebook.com/tuyen.liam/">Let's talk with me</a><img
+                            src="/asset/icon/icon-button.svg" alt="">
+                    </button>
+                    <ul class="icon__contact fs-18s fw-700 font-italic">
+                        <li class="phone"><img class="icon" src="/asset/icon/phone.svg" alt=""><a
+                                href="tel:0388983056">+038 898 3056</a></li>
+                        <li class="email"><img class="icon" src="/asset/icon/email.svg" alt=""><a
+                                href="mailto:tuyenld.dev@gmail.com">tuyenld.dev@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="home__content--right">
+                    <img src="/asset/img/img-background-home-right.svg" alt="">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="page-section" id="experience">
+            <div class="experience__content">
+
+                <div class="experience__content--left">
+                    <div class="mg-16 fs-18s fw-600 font-italic">Experience</div>
+                    <h2 class="title mg-24 fs-48s fw-700">MY EXPERIENCE</h2>
+                    <p class="descrip fs-18s fw-400 mg-48">
+                        Hello there! My name is Dinh Tuyen.
+                        I am a Content Writer, and I'm very passionate and dedicated to my work.
+                    </p>
+                    <button class="button__contact fs-18s">
+                        <a target="_blank" href="https://www.facebook.com/tuyen.liam/">Contact me</a><img
+                            src="/asset/icon/icon-button.svg" alt="">
+                    </button>
+                </div>
+
+                <div class="experience__content--right">
+                    <ul>
+                        <li class="">
+                            <div class="mg-12">
+                                <span class="fs-18s font-italic fw-600 fw-500">01/2023 - Present</span>
+                                <span class="fw-500 fs-16s fw-400">- Onemore Agency</span>
+                            </div>
+                            <div class="career mg-20 fs-32s fw-600">Content Website</div>
+                            <div class="line"></div>
+                        </li>
+                        <li class="">
+                            <div class="mg-12">
+                                <span class="fs-18s font-italic fw-600 fw-500">06/2021 - 12/2022</span>
+                                <span class="fw-500 fs-16s fw-400">- MOC NGUYEN COFFEE CO.,LTD</span>
+                            </div>
+                            <div class="career mg-20 fs-32s fw-600">Content Writer</div>
+                            <div class="line"></div>
+                        </li>
+                        <li class="">
+                            <div class="mg-12">
+                                <span class="fs-18s font-italic fw-600 fw-500">08/2019 - 06/2020</span>
+                                <span class="fw-500 fs-16s fw-400">- iDesign Club</span>
+                            </div>
+                            <div class="career mg-20 fs-32s fw-600">HEAD OF COMMUNICATIONS</div>
+                            <div class="line"></div>
+                        </li>
+                        <li class="">
+                            <div class="mg-12">
+                                <span class="fs-18s font-italic fw-600 fw-500">2020 - 2022</span>
+                                <span class="fw-500 fs-16s fw-400">- University of Economics - The University of
+                                    Danang</span>
+                            </div>
+                            <div class="career mg-20 fs-32s fw-600">FREELANCE GRAPHIC DESIGNER</div>
+                            <div class="line"></div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="page-section" id="skill">
+            <div class="specialties">
+                <div class="fs-18s font-italic fw-600 mg-16">Skill</div>
+                <h2 class="title fs-48s fw-700 mg-48">MY SPECIALTIES</h2>
+                <ul class="specialties__content">
+                    <li class="skill__child">
+                        <input type="checkbox" name="" id="seemore--1" class="see__more--1">
+                        <label for="seemore--1" class="skill__name fs-32s fw-700">
+                            <div class="dots"></div>
+                            <p class="title__name">CONTENT SEO</p>
+                        </label>
+                        <div class="content__left">
+                            <div class="description fs-16s">
+                                Research keywords, plan writing articles for each project. Write articles according to the set plan, implement internal & external links. Check website content with tools like Screaming Frog and conduct Audit content. Weekly/monthly report on project work and progress.
+                                </p>
+
+                            </div>
+
+                            <div class="content__icon">
+                                <label for="seemore--1" class="icon__seemore">
+                                    <img src="/asset/img/add-section-experencie.svg" alt="" class="">
+                                </label>
+                                <label for="seemore--1" class="icon__seeless">
+                                    <img src="/asset/img/apart-from.svg" alt="" class="">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skill__child">
+                        <input type="checkbox" name="" id="seemore--2" class="see__more--2">
+                        <label for="seemore--2" class="skill__name fs-32s fw-700">
+                            <div class="dots"></div>
+                            <p class="title__name">CONTENT CREATION</p>
+                        </label>
+                        <div class="content__left">
+                            <div class="description fs-16s">
+                                Participate in a comprehensive brand assessment and suggest potential strategies. Track and update trending content. Create digital content on Social platforms, websites, ... Build Build video scripts on online marketing platforms. Research keywords and develop media plans.
+                            </div>
+
+                            <div class="content__icon">
+                                <label for="seemore--2" class="icon__seemore">
+                                    <img src="/asset/img/add-section-experencie.svg" alt="" class="">
+                                </label>
+                                <label for="seemore--2" class="icon__seeless">
+                                    <img src="/asset/img/apart-from.svg" alt="" class="">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skill__child">
+                        <input type="checkbox" name="" id="seemore--3" class="see__more--3">
+                        <label for="seemore--3" class="skill__name fs-32s fw-700">
+                            <div class="dots"></div>
+                            <p class="title__name">TECHNICAL SEO</p>
+                        </label>
+                        <div class="content__left">
+                            <div class="description fs-16s">
+                                Optimize the technical elements of the website to improve search engine performance and
+                                findability. Including improving URL structure, sitemap, robots.txt, page load speed,
+                                navigation, security, and implementing technical remedial measures.
+                            </div>
+
+                            <div class="content__icon">
+                                <label for="seemore--3" class="icon__seemore">
+                                    <img src="/asset/img/add-section-experencie.svg" alt="" class="">
+                                </label>
+                                <label for="seemore--3" class="icon__seeless">
+                                    <img src="/asset/img/apart-from.svg" alt="" class="">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skill__child">
+                        <input type="checkbox" name="" id="seemore--4" class="see__more--4">
+                        <label for="seemore--4" class="skill__name fs-32s fw-700">
+                            <div class="dots"></div>
+                            <p class="title__name">MULTIMEDIA DESIGN</p>
+                        </label>
+                        <div class="content__left">
+                            <div class="description fs-16s">
+                                Create creative and engaging multimedia content, combining images, sound, video, and
+                                graphics to deliver messages and create interactive experiences. Includes graphic
+                                design, image processing, video editing, special effects creation, and coordination of
+                                multimedia elements in a media project.
+                            </div>
+
+                            <div class="content__icon">
+                                <label for="seemore--4" class="icon__seemore">
+                                    <img src="/asset/img/add-section-experencie.svg" alt="" class="">
+                                </label>
+                                <label for="seemore--4" class="icon__seeless">
+                                    <img src="/asset/img/apart-from.svg" alt="" class="">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="page-section" id="project">
+            <div class="recent__project">
+                <p class="fs-18s font-italic fw-600 mg-16">Work</p>
+                <h2 class="title fs-48s fw-700 mg-48">
+                    RECENT PROJECT
+                </h2>
+                <div class="project__showcontent">
+                    <div class="child mg-64">
+                        <div class="content__project">
+                            <div>
+                                <p class="content__project--top fs-18s font-italic fw-600 mg-16">Content Writer</p>
+                                <h3 class="fs-30s fw-700 mg-32 project__name">Onemore Agency</h3>
+                            </div>
+                            <a href="http://onemore.vn" target="_blank">
+                                <img src="/asset/icon/open-project.svg" class="content__project--img" alt="">
+                            </a>
+
+                        </div>
+                        <a href="http://onemore.vn" target="_blank">
+                            <img src="/asset/img/onemore-website-seo-manager.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="child mg-64">
+                        <div class="content__project">
+                            <div>
+                                <p class="content__project--top fs-18s font-italic fw-600 mg-16">Content Writer</p>
+                                <h3 class="fs-30s fw-700 mg-32 project__name">HER Skincare & Spa</h3>
+                            </div>
+                            <a href="http://herskincare.vn" target="_blank">
+                                <img src="/asset/icon/open-project.svg" class="content__project--img" alt="">
+                            </a>
+
+                        </div>
+                        <a href="http://herskincare.vn" target="_blank">
+                            <img class="img__project" src="/asset/img/herskincare-spa-technicalseo.jpg" alt="">
+                        </a>
+
+                    </div>
+            
+                    <div class="child mg-64">
+                        <div class="content__project">
+                            <div>
+                                <p class="content__project--top fs-18s font-italic fw-600 mg-16">Content Writer</p>
+                                <h3 class="fs-30s fw-700 mg-32 project__name">Oani Spa</h3>
+                            </div>
+                            <a href="http://oanispa.com" target="_blank">
+                                <img src="/asset/icon/open-project.svg" class="content__project--img" alt="">
+                            </a>
+                        </div>
+                        <a href="http://oanispa.com" target="_blank">
+                            <img class="img__project" src="/asset/img/oanispa-seo-manager.jpg" alt="">
+                        </a>
+                    </div>
+                
+                    <div class="child mg-64">
+                        <div class="content__project">
+                            <div>
+                                <p class="content__project--top fs-18s font-italic fw-600 mg-16">Content Writer
+                                </p>
+                                <h3 class="fs-30s fw-700 mg-32 project__name">MOC NGUYEN COFFEE</h3>
+                            </div>
+                            <a href="http://mocnguyencoffee.com" target="_blank">
+                                <img src="/asset/icon/open-project.svg" class="content__project--img" alt="">
+                            </a>
+                        </div>
+                        <a href="http://mocnguyencoffee.com" target="_blank">
+                            <img class="img__project" src="/asset/img/mocnguyen-coffee-seo-offpage.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <button class="button__contact fs-18s center">
+                    <a target="_blank" href="https://www.facebook.com/tuyen.liam/">Contact me</a><img
+                        src="/asset/icon/icon-button.svg" alt="">
+                </button>
+            </div>
+        </section>
+
+        <section class="page-section" id="contact">
+            <div class="contact">
+                <p class="fs-18s font-italic fw-600 mg-16">Thanks for watching!</p>
+                <h2 class="contact__me fs-48s fw-700 mg-48">
+                    CONTACT ME...
+                </h2>
+                <div class="contact__content">
+                    <div class="contact__content--left">
+                        <img src="/asset/img/avatar.png" alt="" class="avatar mg-32">
+                        <h3 class="contact__name fs-48s fw-700 text-center mg-12">LE DINH TUYEN</h3>
+                        <div class="description fw-700 font-italic fs-24 text-center mg-16">
+                            Content Writer <span class="font-normal fw-500">base in</span> Vietnam
+                        </div>
+                        <button class="contact__downloadCV fs-18s center fw-500">
+                            <a target="_blank" href="https://www.facebook.com/tuyen.liam/">Contact me</a><img
+                                src="/asset/icon/icon-download-cv.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="contact__content--right">
+                        <div class="infor__contact">
+                            <div class="infor__contact--chill mg-24">
+                                <img src="/asset/icon/icon-local.svg" alt="" class="icon">
+                                <p class="fs-18s fw-700 font-italic content__infor">Danang, Vietnam</p>
+                            </div>
+                            <div class="infor__contact--chill mg-24">
+                                <img src="/asset/icon/icon-age.svg" alt="" class="icon">
+                                <p class="fs-18s fw-700 font-italic content__infor">24 yrs</p>
+                            </div>
+
+                            <div class="infor__contact--chill mg-24">
+                                <img src="/asset/icon/icon-phone.svg" alt="" class="icon">
+                                <a href="tel:0388983056" class="fs-18s fw-700 font-italic content__infor">038 898
+                                    3056</a>
+                            </div>
+                            <div class="infor__contact--chill mg-24">
+                                <img src="/asset/icon/icon-email.svg" alt="" class="icon">
+                                <a href="mailto:tuyenld.dev@gmail.com"
+                                    class="fs-18s fw-700 font-italic content__infor">tuyenld.dev@gmail.com</a>
+                            </div>
+
+                            <div class="infor__contact--line mg-48"></div>
+                        </div>
+                        <div class="infor__descrip mg-64">
+                            <div class="infor__descrip--child">
+                                <div class="mg-20 year">
+                                    <div class="descrip__years fs-48s fw-700">2+</div>
+                                    <p class="fs-18s fw-700 font-italic">Years <br> experience...</p>
+                                </div>
+                                <p class="fs-18s">
+                                    I have over 2 years of experience in digital marketing, focusing on online
+                                    advertising campaigns, SEO, content management and development.
+                                </p>
+                            </div>
+                            <div class="infor__descrip--child">
+                                <div class="mg-20 year">
+                                    <div class="descrip__years fs-48s fw-700">4+</div>
+                                    <p class="fs-18s fw-700 font-italic">Project <br> Worldwide...</p>
+                                </div>
+                                <p class="fs-18s">
+                                    I have experience in developing and implementing effective Digital Marketing campaigns, creating interaction and growth for more than 4 different brands in promotional projects.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="infor__quotes">
+                            <img src="/asset/icon/icon-quotes.svg" class="icon" alt="">
+                            <p class="quotes color-white fs-20s fw-600 font-italic">“Unlocking the endless potential of
+                                your brand through Digital Marketing is the key to outstanding success.”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</body>
+
+</html>

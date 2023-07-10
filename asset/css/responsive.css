@@ -1,0 +1,265 @@
+@media only screen and (min-width: 1024px) {
+    /* CSS styles cho desktop */
+
+}
+
+@media only screen and (max-width: 1600px) {
+    .navbar {
+        width: 200px;
+        padding: 56px 0 0 20px;
+    }
+    .main__content {
+        margin-left: 200px;
+    }
+    .home__content {
+
+    }
+    .home__content--left {
+        margin-left: 64px;
+    }
+    .experience__content {
+        width: 100%;
+    }
+    .experience__content--left .title {
+        font-size: 32px;
+    }
+    .experience__content--left .descrip {
+        font-size: 16px;
+    }
+    .experience__content--left .button__contact {
+        font-size: 16px;
+    }
+    .experience__content--right .career {
+        font-size: 22px;
+    }
+    .specialties {
+        width: 100%;
+    }
+    .specialties .title {
+        font-size: 32px;
+    }
+    .specialties .title__name {
+        font-size: 24px;
+    }
+    .recent__project {
+        width: 100%;
+    }
+    .recent__project .title {
+        font-size: 32px;
+    }
+    .project__showcontent .content__project .project__name {
+        font-size: 26px;
+    }
+    .project__showcontent .content__project .content__project--img {
+        max-width: 32px;
+    }
+
+    .contact {
+    /* padding: 0 64px; */
+    }
+    .contact .contact__me {
+        font-size: 32px;
+    }
+    .contact__content--left {
+        width: 35%;
+    }
+    .contact__content--left .contact__name {
+        font-size: 32px;
+    }
+    .contact__content--left .description {
+        font-size: 18px;
+    }
+
+    .contact__content--right {
+        width: 60%;
+    }
+
+    .contact__content--right .infor__quotes .quotes {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .contact__content--right .infor__quotes .icon {
+        max-width: 32px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    #experience {
+        padding-top: 40px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .main__content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .navbar {
+       display: none;
+    }
+   
+    .navbar__mobile {
+        display: flex;
+    }
+
+    .home__content {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        margin-top: 120px;
+    }
+    .home__content--right {
+        flex-basis: 1;
+    }
+    .home__content--left {
+        margin-left: 64px;
+        min-width: 450px;
+    }
+    .home__content--left .name {
+        font-size: 56px;
+    }
+    .home__content--left .description {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    .home__content--left .button__contact {
+        padding: 12px 32px;
+        margin-bottom: 24px;
+    }
+    .home__content--left .icon__contact {
+        font-size: 14px;
+
+    }
+    .home__content--left .icon__contact li:not(:last-child) {
+        margin-right: 12px;
+    }
+    .home__content--left .icon__background {
+        transform: translate(-25%);
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    /* CSS styles cho smartphone */
+    .navbar {
+        display: none;
+    }
+
+    .navbar__mobile {
+        display: flex;
+    }
+    .main__content {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    
+    .experience__content, .specialties, .recent__project, .contact {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .home__content {
+        justify-content: center;
+        height: auto;
+        padding: 175px 16px 64px;
+    }
+    
+    .home__content--right {
+        display: none;
+    }
+    .home__content--left {
+        margin: 0;
+        min-width:auto;
+    }
+    .home__content--left .icon__background {
+        transform: translate(-50%);
+    }
+    .home__content--left .name {
+        font-size: 48px;
+        margin-bottom: 16px;
+    }
+    .home__content--left .description {
+        font-size: 20px;
+        margin-bottom: 48px;
+    }
+    .home__content--left .button__contact {
+        padding: 12px 32px;
+        margin-bottom: 24px;
+    }
+    .home__content--left .icon__contact {
+        font-size: 16px;
+        flex-direction: column;
+    }
+    .home__content--left .icon__contact li:not(:last-child) {
+        margin-bottom: 16px;
+    }
+    .home__content--left .icon__background {
+        transform: translate(-25%);
+    }
+    .experience__content {
+        flex-direction: column;
+        /* padding: 64px 16px; */
+    }
+    .experience__content .experience__content--left {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .experience__content .experience__content--right {
+        width: 100%;
+    }
+    .specialties__content .skill__child {
+        flex-direction: column;
+    }
+    .specialties__content .skill__name {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .specialties__content .content__left {
+        width: 100%;
+    }
+    .specialties__content .content__left .content__icon {
+        margin-left: 8px;
+    }
+
+
+    .project__showcontent .child {
+        width: 100%;
+    }
+
+    .contact .contact__content {
+        flex-direction: column;
+    }
+    .contact__content .contact__content--left {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    .contact__content .contact__content--right {
+        width: 100%;
+    }
+    .contact__content--right .infor__contact {
+        flex-direction: column;
+    }
+    .contact__content--right .infor__descrip {
+        flex-direction: column;
+    }
+    .infor__contact .infor__contact--chill {
+        transform: translateX(15%);
+        
+    }
+    .infor__descrip .infor__descrip--child:not(:last-child) {
+        margin-bottom: 24px;
+        margin-right: 0;
+    }
+    .infor__descrip .infor__descrip--child:last-child {
+        margin-left: 0;
+    }
+
+
+}
+
+
+
